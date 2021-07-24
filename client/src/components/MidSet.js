@@ -3,8 +3,8 @@ import styled from 'styled-components'
 import MainPageButton from './MainPageButton'
 
 const OneSet = styled.div`
-  width: 100vw;
-  height: 33.33%;
+  width: 100%;
+  height: 60vh;
   display: flex;
   flex-direction: ${props=> props.imgFirst ? `row` : `row-reverse`};
 

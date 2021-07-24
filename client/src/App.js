@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 import header from '../src/assets/desktop/image-header.jpg'
 import { GlobalStyle } from '../src/globalStyle'
 import MainNav from './components/MainNav'
@@ -13,6 +13,19 @@ import arrowDown from './assets/icon-arrow-down.svg'
 const MainWrapper = styled.div`
   width: 100vw;
   max-width: 1440px;
+`
+
+const arrowDownMove = keyframes`
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+    transform: translateY(10px);
+  }
+  100% {
+    opacity: 1;
+  }
 `
 
 const TopSection = styled.section`
@@ -36,6 +49,12 @@ const TopSection = styled.section`
   #main-arrow-down {
     background: transparent;
     border: none;
+    display: inline-block;
+
+    &:hover {
+      cursor: pointer;
+      animation: ${arrowDownMove} 1s infinite;
+    }
   }
 `
 const MidSection = styled.section`
