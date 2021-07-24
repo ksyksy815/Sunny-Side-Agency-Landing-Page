@@ -6,6 +6,7 @@ export const GlobalStyle = createGlobalStyle`
     padding: 0;
     box-sizing: border-box;
     font-family: 'Barlow', sans-serif;
+    font-size: 18px;
   }
 
   h1, h2, h3 {
