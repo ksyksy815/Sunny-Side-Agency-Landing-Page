@@ -1,12 +1,14 @@
 import styled from 'styled-components'
 import header from '../src/assets/desktop/image-header.jpg'
 import { GlobalStyle } from '../src/globalStyle'
+import MainNav from './components/MainNav'
 import MidSet from './components/MidSet'
 import desktopEgg from './assets/desktop/image-transform.jpg'
 import desktopCup from './assets/desktop/image-stand-out.jpg'
 import MidDigitalSet from './components/MidDigitalSet'
 import desktopCherry from './assets/desktop/image-graphic-design.jpg'
 import desktopOrange from './assets/desktop/image-photography.jpg'
+import arrowDown from './assets/icon-arrow-down.svg'
 
 const MainWrapper = styled.div`
   width: 100vw;
@@ -19,6 +21,22 @@ const TopSection = styled.section`
   background-image: url(${header});
   background-size: cover;
   background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h1 {
+    position: absolute;
+    color: #fff;
+    font-size: 3em;
+    letter-spacing: 5px;
+    top: 30%;
+  }
+
+  #main-arrow-down {
+    background: transparent;
+    border: none;
+  }
 `
 const MidSection = styled.section`
   width: 100%;
@@ -31,7 +49,11 @@ function App() {
     <>
       <GlobalStyle/>
       <MainWrapper>
-        <TopSection></TopSection>
+        <MainNav />
+        <TopSection>
+          <h1>WE ARE CREATIVES</h1>
+          <button id="main-arrow-down"><img src={arrowDown} alt="scroll down arrow"/></button>
+        </TopSection>
         <MidSection>
           <MidSet 
             title={"Transform your brand"}
