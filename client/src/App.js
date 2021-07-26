@@ -9,6 +9,7 @@ import MidDigitalSet from './components/MidDigitalSet'
 import desktopCherry from './assets/desktop/image-graphic-design.jpg'
 import desktopOrange from './assets/desktop/image-photography.jpg'
 import arrowDown from './assets/icon-arrow-down.svg'
+import Testimonial from './components/Testimonial'
 
 const MainWrapper = styled.div`
   width: 100vw;
@@ -17,14 +18,12 @@ const MainWrapper = styled.div`
 
 const arrowDownMove = keyframes`
   0% {
-    opacity: 1;
   }
-  50% {
+  50% { 
     opacity: 1;
     transform: translateY(10px);
   }
   100% {
-    opacity: 1;
   }
 `
 
@@ -97,7 +96,7 @@ function App() {
             image2={desktopOrange}
           />
         </MidSection>
-        
+        <Testimonial />
       </MainWrapper>
     </>
   );
