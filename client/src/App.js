@@ -10,6 +10,7 @@ import desktopCherry from './assets/desktop/image-graphic-design.jpg'
 import desktopOrange from './assets/desktop/image-photography.jpg'
 import arrowDown from './assets/icon-arrow-down.svg'
 import Testimonial from './components/Testimonial'
+import Footer from './components/Footer'
 
 const MainWrapper = styled.div`
   width: 100vw;
@@ -97,6 +98,7 @@ function App() {
           />
         </MidSection>
         <Testimonial />
+        <Footer />
       </MainWrapper>
     </>
   );
