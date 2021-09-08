@@ -13,13 +13,14 @@ const MidStyle = styled.ul`
 export default function Mid() {
   return (
     <MidStyle>
-      {midContents1.map(content => 
+      {midContents1.map((content, i) => 
         <MidImageTextSet 
           key={content.title} 
           title={content.title} 
           text={content.text}
           mobileImage={content.mobileImage}
           desktopImage={content.desktopImage}
+          color={ i === 0 ? `hsl(51, 100%, 49%)` : `hsl(51, 100%, 49%)`}
         />
       )}
       {midContents2.map(content => 

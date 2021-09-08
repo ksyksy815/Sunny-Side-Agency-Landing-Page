@@ -5,12 +5,21 @@ const MidSet2Style = styled.li`
   width: 100%;
   height: auto;
   display: flex;
-  background-image: ${props => `url(${props.image})`};
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   background-size: 100%;
   background-repeat: no-repeat;
+  position: relative;
+
+  img {
+    width: 100%;
+    object-fit: contain;
+  }
 
   .mid-text-box {
-    margin-top: 50vh;
+    position: absolute;
+    bottom: 10%;
     padding: 1rem 1.5rem;
     display: flex;
     flex-direction: column;
@@ -38,10 +47,10 @@ export default function MidImageTextSet2( {title, text, mobileImage, desktopImag
   }, [])
 
   return (
-    <MidSet2Style 
-      image={width >= 500 ? desktopImage : mobileImage}
+    <MidSet2Style
       fontColor={fontColor}
     >
+      <img src={width >= 500 ? desktopImage : mobileImage} alt={title}/>
       <div className="mid-text-box">
         <h1>{title}</h1>
         <p>{text}</p>

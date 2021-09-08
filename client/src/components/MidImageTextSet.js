@@ -36,7 +36,7 @@ const MidSetStyle = styled.li`
   }
 `
 
-export default function MidImageTextSet( {title, text, mobileImage, desktopImage}) {
+export default function MidImageTextSet( {title, text, mobileImage, desktopImage, color}) {
   const [width, setWidth] = useState(null)
 
   useEffect(() => {
@@ -49,7 +49,7 @@ export default function MidImageTextSet( {title, text, mobileImage, desktopImage
       <div className="mid-text-box">
         <h1>{title}</h1>
         <p>{text}</p>
-        <LearnMoreButton/>
+        <LearnMoreButton color={color}/>
       </div>
     </MidSetStyle>
   )
