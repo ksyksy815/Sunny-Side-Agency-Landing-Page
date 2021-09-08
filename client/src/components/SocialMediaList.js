@@ -8,6 +8,15 @@ const SocialMediaStyle = styled.ul`
   justify-content: center;
   align-items: center;
   column-gap: 1rem;
+
+  li {
+    transition: 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      transform: translateY(-2px);
+    }
+  }
 `
 
 export default function SocialMediaList() {

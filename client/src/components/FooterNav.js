@@ -8,6 +8,16 @@ const FooterNavStyle = styled.ul`
   align-items: center;
   column-gap: 2rem;
   color: hsl(168, 34%, 41%);
+
+  li {
+    transition: 0.2s;
+
+    &:hover {
+      cursor: pointer;
+      color: #fff;
+      transform: translateY(-2px);
+    }
+  }
 `
 
 export default function FooterNav() {
